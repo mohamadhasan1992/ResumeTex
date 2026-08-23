@@ -1,0 +1,265 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Mohamadhasan Tabrizi
+% Based on: https://github.com/jakegut/resume (which was itself based on https://github.com/sb2nov/resume)
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & {\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Three-column variant, used for entries that need a title, a subtitle, and a date (e.g. Hobbies)
+\newcommand{\resumeThreeCol}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & {\small #3} \\
+      \multicolumn{2}{l}{\small\textit{#2}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  \color{gray}
+  \small Last updated: August 23, 2026
+\end{flushright}
+
+\vspace{-15pt}
+
+\begin{center}
+    \textbf{\Huge \scshape Mohamadhasan Tabrizi} \\ \vspace{6pt}
+    \small \textit{Back-End / Full-Stack Software Engineer} \\ \vspace{6pt}
+    \faIcon{github}
+    \href{https://github.com/mohamadhasan1992}{\underline{github.com/mohamadhasan1992}} $ \; $
+    \faIcon{linkedin}
+    \href{https://www.linkedin.com/in/mohamadhasan-tabrizi/}{\underline{linkedin.com/in/mohamadhasan-tabrizi}} $ \; $
+    \faIcon{envelope}
+    \href{mailto:tabrizi.mohamadhasan@yahoo.com}
+    {\underline{tabrizi.mohamadhasan@yahoo.com}}
+\end{center}
+
+% -------------------- SUMMARY --------------------
+\section{Summary}
+\resumeSubHeadingListStart
+  \resumeItem{Back-End/Full-Stack Engineer with 8+ years of experience designing and shipping scalable Node.js (NestJS) services, real-time systems, and full-stack web applications. Skilled in Clean Architecture, DDD, CQRS, and microservices, with a track record of measurable improvements in performance, reliability, and reduced coupling in production systems. M.Sc. in Cryptography \& Secure Communications with a strong foundation in security-by-design.}
+\resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} JavaScript, TypeScript, Python \\
+     \textbf{Backend:} NestJS, Express, FastAPI, gRPC \\
+     \textbf{Frontend:} React, Next.js, Redux, Zustand, React Query \\
+     \textbf{UI Libraries:} Tailwind CSS, Material UI, Chakra UI, Bootstrap \\
+     \textbf{Databases:} MongoDB (Mongoose), PostgreSQL (TypeORM), Redis \\
+     \textbf{DevOps \& Cloud:} Docker, Docker Compose, CI/CD (GitHub Actions), AWS S3, NGINX, Cloudflare \\
+     \textbf{Messaging \& Real-Time:} RabbitMQ, Redis Streams, WebSocket (Socket.IO), Firebase Cloud Messaging \\
+     \textbf{Architecture:} Clean Architecture, Domain-Driven Design, CQRS, Microservices, Event-Driven, SOA \\
+     \textbf{Monitoring \& Observability:} Prometheus, Grafana, ELK Stack, APM \\
+     \textbf{Other Tools:} Swagger/OpenAPI, TUS Protocol, Third-Party API Integration, MediaMTX, ThingsBoard, Test-Driven Development
+    }}
+ \end{itemize}
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {JP-Droni SRL}{2024 -- 2026}
+      {Back-End Developer - jpdroni.it}{Italy}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained a NestJS monorepo backend for analyzing drone-captured images and telemetry data, using service-oriented design to keep modules independently deployable}
+        \resumeItem{Built a Python microservice hosting multiple models and algorithms, receiving processing events}
+        \resumeItem{Built scalable services on MongoDB, Redis, and RabbitMQ to support efficient, reliable inter-service communication}
+        \resumeItem{Implemented large file uploads and resumable data transfers using AWS S3 and the TUS protocol}
+        \resumeItem{Delivered real-time video streaming of drone footage to the frontend using MediaMTX}
+        \resumeItem{Set up CI/CD pipelines with GitHub Actions to automate testing, building, and deployment}
+        \resumeItem{Containerized services with Docker and configured NGINX + Cloudflare for reverse proxy, security, and performance}
+        \resumeItem{Integrated the ELK stack (with Filebeat) and Prometheus + Grafana for centralized logging, monitoring, and alerting}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {NEOM-IT}{2022 -- 2024}
+      {Backend Developer -- Huden.nl}{Netherlands}
+      \resumeItemListStart
+        \resumeItem{Built a NestJS application following CQRS, Clean Architecture, and DDD principles, improving performance by 30\% through read/write database separation}
+        \resumeItem{Integrated the Meta WhatsApp Business API and a Telegram bot to deliver real-time property alert notifications}
+        \resumeItem{Standardized deployments across environments using Docker and Docker Compose}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {NEOM-IT}{2022 -- 2024}
+      {Full-Stack Developer -- Sebuda.com}{Netherlands}
+      \resumeItemListStart
+        \resumeItem{Adopted a Service-Oriented Architecture (SOA), improving responsiveness and scalability by 30\%}
+        \resumeItem{Implemented RabbitMQ for asynchronous inter-service communication, reducing coupling and increasing reliability}
+        \resumeItem{Built real-time notifications with Firebase Cloud Messaging (FCM) and a live chat system using Socket.IO}
+        \resumeItem{Integrated third-party APIs (Facebook, YouTube, TikTok, X) to streamline account listing and verification workflows}
+        \resumeItem{Set up the ELK stack for centralized logging and performance monitoring}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Rayan Softland}{2021 -- 2022}
+      {Full-Stack Developer}{Tabriz, Iran}
+      \resumeItemListStart
+        \resumeItem{Engineered a marketplace platform connecting 500+ suppliers, architects, and engineers, reducing lead times by 40\%}
+        \resumeItem{Developed RESTful APIs using Test-Driven Development, cutting error rates by 25\%}
+        \resumeItem{Designed a role- and location-based access control system, doubling authorization granularity}
+        \resumeItem{Built a React management dashboard with 30+ features for data visualization and document management}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {MelkeTabriz}{2020 -- 2021}
+      {Full-Stack Developer}{Tabriz, Iran}
+      \resumeItemListStart
+        \resumeItem{Designed and optimized a streamlined RESTful API, reducing response times by 30\%}
+        \resumeItem{Built a configurable form generator, cutting development and maintenance effort by over 70\%}
+        \resumeItem{Delivered a React-based CRM dashboard with 30+ features for document management, HR, and accounting}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Freelance}{2018 -- 2020}
+      {Full-Stack Developer}{Tabriz, Iran}
+      \resumeItemListStart
+        \resumeItem{\textbf{Bursiness:} Built an application for traders to log transactions and generate weekly/monthly profit-and-loss reports}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+        {\textbf{English Tutor} $|$ \footnotesize\emph{React, NestJS, Socket.io, Ollama (Qwen), TTS, STT}}{\small{Aug. 2025}}
+        \resumeItemListStart
+            \resumeItem{Built a personal AI-powered English speaking practice app where users send voice messages and receive real-time conversational feedback}
+            \resumeItem{Implemented speech-to-text and text-to-speech pipelines to enable natural voice-based interaction with the AI}
+            \resumeItem{Ran the Qwen model locally via Ollama for grammar correction and conversational responses}
+            \resumeItem{Built the backend with NestJS and the frontend with React for a smooth full-stack experience}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Shahid Beheshti University (SBU)}{2016 -- 2019}
+      {M.Sc. in Cryptography \& Secure Communications}{GPA: 16.72/20}
+      \resumeItemListStart
+        \resumeItem{Thesis: \textit{Introducing a Privacy-Preserving Access Control Model for Healthcare} -- Grade: 20/20}
+      \resumeItemListEnd
+
+    \vspace{-8pt}
+
+    \subsection{Coursework}
+      \textbf{Relevant Courses:} Cryptography \& Algorithms, Computer Networks, Discrete Mathematics, Linear Algebra, Calculus, Probability \& Statistics
+
+  \resumeSubHeadingListEnd
+
+% -------------------- HOBBIES --------------------
+\section{Hobbies}
+  \resumeSubHeadingListStart
+    \resumeThreeCol
+      {\textbf{Azerbaijani Dancer}}
+      {Performing Azerbaijani traditional dance}
+      {2020 -- Present}
+
+    \resumeThreeCol
+      {\textbf{PlayStation Gaming}}
+      {Story-driven and competitive titles}
+      {Lifelong hobby}
+  \resumeSubHeadingListEnd
+
+\end{document}
